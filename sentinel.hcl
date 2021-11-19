@@ -15,3 +15,10 @@ policy "soft-mandatory-policy" {
   source            = "./restrict-ingress-sg-rule-cidr-blocks.sentinel"
   enforcement_level = "soft-mandatory"
 }
+
+policy "soft-mandatory-vpn" {
+  source            = "./only-allow-selective-dh-groups-aws-vpn.sentinel"
+  enforcement_level = "soft-mandatory"
+}
+    
+    
