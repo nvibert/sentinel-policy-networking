@@ -15,7 +15,7 @@ param resource_types default [
   "aws_security_group",
   "aws_customer_gateway",
   "aws_vpn_connection",
-  "aws_vpn_gateway_vpn"
+  "aws_vpn_gateway_vpn",
 ]
 
 # List of mandatory tags
