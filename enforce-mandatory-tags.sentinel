@@ -11,8 +11,11 @@ import "aws-functions" as aws
 
 # List of resources that are required to have name/value tags
 param resource_types default [
-  "aws_s3_bucket",
-  "aws_instance",
+  "aws_vpc",
+  "aws_security_group",
+  "aws_customer_gateway",
+  "aws_vpn_connection",
+  "aws_vpn_gateway_vpn"
 ]
 
 # List of mandatory tags
