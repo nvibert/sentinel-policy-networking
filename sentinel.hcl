@@ -9,6 +9,15 @@ module "tfstate-functions" {
 module "tfconfig-functions" {
     source = "https://raw.githubusercontent.com/hashicorp/terraform-guides/master/governance/third-generation/common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 }
+    
+module "aws-functions" {
+  source = "https://raw.githubusercontent.com/hashicorp/terraform-guides/master/governance/third-generation/aws/aws-functions/aws-functions.sentinel"
+}
+
+policy "advisory-mandatory-tags" {
+  source = "./enforce-mandatory-tags.sentinel"
+  enforcement_level = "advisory"
+}
 
 policy "soft-mandatory-vpn" {
   source            = "./only-allow-selective-dh-groups-aws-vpn.sentinel"
