@@ -1,5 +1,5 @@
 # This policy uses the Sentinel tfplan/v2 import to require that
-# all AWS VPNs don't use DH Group 2
+# AWS VPNs only used allowed DH groups
 
 # Import common-functions/tfplan-functions/tfplan-functions.sentinel
 # with alias "plan"
