@@ -15,7 +15,7 @@ policy "soft-mandatory-vpn" {
   enforcement_level = "soft-mandatory"
 }
     
-#policy "soft-mandatory-policy" {
-#  source            = "./restrict-ingress-sg-rule-cidr-blocks.sentinel"
-#  enforcement_level = "hard-mandatory"
-#}
+policy "hard-mandatory-policy" {
+  source            = "./restrict-ingress-sg-rule-cidr-blocks.sentinel"
+  enforcement_level = "hard-mandatory"
+}
