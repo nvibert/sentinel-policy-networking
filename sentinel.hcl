@@ -21,7 +21,7 @@ policy "advisory-mandatory-tags" {
 
 policy "soft-mandatory-vpn" {
   source            = "./only-allow-selective-dh-groups-aws-vpn.sentinel"
-  enforcement_level = "advisory"
+  enforcement_level = "soft-mandatory"
 }
     
 policy "hard-mandatory-policy" {
