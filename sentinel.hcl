@@ -14,17 +14,17 @@ module "aws-functions" {
   source = "https://raw.githubusercontent.com/hashicorp/terraform-guides/master/governance/third-generation/aws/aws-functions/aws-functions.sentinel"
 }
 
-policy "advisory-mandatory-tags" {
+policy "hard-mandatory-tags" {
   source = "./enforce-mandatory-tags.sentinel"
-  enforcement_level = "advisory"
+  enforcement_level = "hard-mandatory"
 }
 
 policy "soft-mandatory-vpn" {
   source            = "./only-allow-selective-dh-groups-aws-vpn.sentinel"
-  enforcement_level = "soft-mandatory"
+  enforcement_level = "advisory"
 }
     
 policy "hard-mandatory-policy" {
   source            = "./restrict-ingress-sg-rule-cidr-blocks.sentinel"
-  enforcement_level = "hard-mandatory"
+  enforcement_level = "advisory"
 }
