@@ -16,7 +16,7 @@ module "aws-functions" {
 
 policy "hard-mandatory-tags" {
   source = "./enforce-mandatory-tags.sentinel"
-  enforcement_level = "hard-mandatory"
+  enforcement_level = "soft-mandatory"
 }
 
 policy "soft-mandatory-vpn" {
