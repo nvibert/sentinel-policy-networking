@@ -6,7 +6,7 @@
 import "tfplan-functions" as plan
 
 # Allowed DH Group Types
-allowed_dh_groups = ["19","20","21"]
+allowed_dh_groups = [19,20,21]
 
 # Get all VPN Connections
 allVPNConnections = plan.find_resources("aws_vpn_connection")
