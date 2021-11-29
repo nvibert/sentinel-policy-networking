@@ -10,12 +10,12 @@ allowed_dh_groups = ["19","20","21"]
 
 # Get all VPN Connections
 allVPNConnections = plan.find_resources("aws_vpn_connection")
-
+print(allVPNConnections)
 # Filter to VPN with violations
 # Warnings will be printed for all violations since the last parameter is true
 violatingVPNs = plan.filter_attribute_contains_items_not_in_list(allVPNConnections,
                         "tunnel1_phase1_dh_group_numbers", allowed_dh_groups, true)
-
+print(violatingVPNs)
 # Count violations
 violations = length(violatingVPNs["messages"])
 
