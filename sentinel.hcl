@@ -14,7 +14,7 @@ module "aws-functions" {
   source = "https://raw.githubusercontent.com/hashicorp/terraform-guides/master/governance/third-generation/aws/aws-functions/aws-functions.sentinel"
 }
 
-policy "hard-mandatory-tags" {
+policy "advisory-tags" {
   source = "./enforce-mandatory-tags.sentinel"
   enforcement_level = "advisory"
 }
